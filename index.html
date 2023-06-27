@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>My Notes App</title>
+
+    <!-- Page Information  -->
+    <meta charset="UTF-8">
+    <meta name="description" content="An app to keep a list of all your important notes.">
+    <meta name="keywords" content="note, notes, important notes, notes app">
+    <meta name="author" content="Ambreen Haleem">
+
+    <!-- Link the css files -->
+    <link rel="stylesheet" href="/css/onsen/onsenui.css">
+    <link rel="stylesheet" href="/css/onsen/onsen-css-components.css">
+    <script src="/js/onsen/onsenui.min.js"></script>
+    <script src="/js/onsen/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Link the Web App Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="196x196" href="/icons/favicon-196.png">
+    <meta name="msapplication-square70x70logo" content="/icons/mstile-icon-128.png">
+    <meta name="msapplication-square150x150logo" content="/icons/mstile-icon-270.png">
+    <meta name="msapplication-square310x310logo" content="/icons/mstile-icon-558.png">
+    <meta name="msapplication-wide310x150logo" content="/icons/mstile-icon-558-270.png">
+    <link rel="apple-touch-icon" href="/icons/apple-icon-180.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    
+  </head>
+  
+  <body>
+    
+    <!-- <ons-navigator id="myNavigator" animation="fade" page="pages/home.html"></ons-navigator> -->
+    <ons-page>
+      
+      <ons-toolbar>
+        
+        <div class="center">Home</div>
+        <img src="images/logo.png" alt="My Notes App" />
+      </ons-toolbar>
+      <ons-tabbar swipeable="" position="auto">
+        <ons-tab page="home.html" label="Home" icon="ion-ios-home, material:md-home" active="">
+        </ons-tab>
+        <ons-tab page="addNote.html" label="Add Note" icon="fa-file" "="">
+        </ons-tab>
+        <ons-tab page=" settings.html" label="Settings" icon="md-settings">
+        </ons-tab>
+      </ons-tabbar>
+    </ons-page>
+    <template id="home.html">
+      <ons-page id="home">
+        <!-- <p style="text-align: center;">
+          My Notes List
+        </p> -->
+        <!-- <ons-list-header class="listHeader">My Notes</ons-list-header> -->
+        <ons-list modifier="inset" class = "ons-listContainer">
+        <ons-list-header>My Notes List</ons-list-header>
+        <div id="list-output">
+        <!-- <ons-list-item class="taskContainer">
+          <div class="center">
+            Lab 01
+          </div>
+          <div class="right"> Is Completed
+            <ons-switch class="switch"></ons-switch>
+          </div>
+        </ons-list-item>
+        <ons-list-item class="taskContainer">
+          <div class="center">
+            Lab 02
+          </div>
+          <div class="right"> Is Completed
+            <ons-switch class="switch"></ons-switch>
+          </div>
+        </ons-list-item>
+        <ons-list-item class="taskContainer">
+          <div class="center">
+            Lab 03
+          </div>
+          <div class="right"> Is Completed
+            <ons-switch class="switch"></ons-switch>
+          </div>
+        </ons-list-item> -->
+        </div>
+      </ons-list>
+      </ons-page>
+    </template>
+    <template id="addNote.html">
+      <ons-page id="addNote">
+        <div >
+          <ons-input id="note" modifier="underbar" placeholder="Note" float=""></ons-input>
+        </div>
+        <div >
+          <ons-input id="category" modifier="underbar" placeholder="Category" float=""></ons-input>
+        </div>
+        <div class="textareaDiv">
+          <textarea id="description" class="textarea" rows="3" cols="300" placeholder="Description"></textarea>
+        </div>
+          <!-- <div class="switchContainer">
+            <p>Is Completed </p>
+            <ons-switch></ons-switch>
+          </div> -->
+          <div class="ons-buttonDiv">
+            <ons-button id="btnSave" >Save</ons-button>
+          </div>
+        
+      </ons-page>
+    </template>
+    <template id="settings.html">
+      <ons-page id="settings">
+        <div style="text-align: center; margin-top: 30px;">
+          <div class="switchContainer">
+            <p>Delete notes not allowed</p>
+            <ons-switch id ="deleteSwitch" ></ons-switch>
+          </div>
+          <div class="ons-buttonDiv">
+            <ons-button id="btnFullScreen" >Toggle Fullscreen</ons-button>
+          </div>
+          <div class="ons-buttonDiv">
+            <ons-button id="btnNetworkInfo" >Show Network Details</ons-button>
+          </div>
+        </div>
+      </ons-page>
+    </template>
+
+    <!-- Include the page script -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+   
+    <script src="./pages/scripts.js" type="module" ></script>
+    <script src="./js/scripts.js" type="module" ></script>
+    </body>
+</html>

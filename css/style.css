@@ -1,0 +1,61 @@
+.taskContainer{
+    /* display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    padding: 10px; */
+    
+    align-self: stretch;
+    background-color: '#fff';
+    margin: 10px;
+    padding: 15px;
+    border-radius: 7;
+    border-width: 1;
+    border-color: '#bcbcbc';
+}
+
+.ons-listContainer{
+    margin-top: 12px;
+}
+
+.switchContainer{
+    display: flex;
+    justify-content:center ;
+    flex-direction:row;
+    padding: 10px;
+}
+.switch{
+    margin: 14px;
+}
+
+.switchText{
+    margin: 14px;
+    padding-top: 50px;
+}
+.listHeader{
+    padding: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px !important;
+    background-color: #d1def6;
+    color: black;
+}
+img{
+    margin: 4px;
+}
+ons-input,.textareaDiv {
+    display: flex;
+    justify-content: left;
+    margin: 15px;
+}
+
+textarea{
+    width: auto;
+}
+.ons-buttonDiv {
+    display: flex;
+    justify-content: center;
+    margin: 55px;
+}
+.ons-listbuttonDiv{
+    display: flex;
+    justify-content: right;
+}
